@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup</title>
+</head>
+<body>
+    <h1>Sign up Page</h1>
+
+    Name: <input type="text" id = "name" placeholder="Enter your Name"><br> <br>
+    Phone num: <input type="tel" id = "phone" placeholder="Enter your phone number"> <br> <br>
+    Email: <input type="email" id = "email" placeholder="Enter your Email"> <br> <br>
+    Passward: <input type="password" id = "pass" placeholder="Enter your Passward"> <br> <br>
+
+    <button onclick="submitDetails()"> Submit </button>
+</body>
+</html>
+
+<script>
+    var user1 = JSON.parse(localStorage.getItem("userData1")) || [];
+// console.log(user);
+
+ function submitDetails() {
+
+    let userDetailss1 = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        Passward: document.getElementById("pass").value,
+    };
+
+    if(name.value == "" || phone.value == "" || email.value == "" || pass.value == "") {
+        alert("Fill all Details");
+        return false;
+    } else {
+        true;
+    }
+
+    user1.push(userDetailss1);
+    console.log(user1);
+
+    localStorage.setItem("userData1", JSON.stringify(user1));
+}
+
+</script>

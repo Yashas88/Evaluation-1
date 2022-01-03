@@ -1,0 +1,30 @@
+#main {
+    height: 500px;
+    width: 700px;
+    border: 2px solid black;
+    margin-top: 10%;
+    margin: auto;
+}
+
+#navbar {
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 3%;
+    margin: auto;
+}
+
+ul {
+    display: flex;
+}
+ul>a {
+    text-decoration: none;
+    margin-right: 10px;
+    list-style: none;
+    font-size: 20px;
+    color: red;
+    margin-left: 15px;
+}
+img {
+    height: 100%;
+    width: 100%;
+}

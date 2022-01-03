@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login page</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+
+    Email: <input type="email" id = "email1" placeholder="Enter yout email"> <br><br>
+    Passward: <input type="passward" id = "pass1" placeholder="Enter your Passward"> <br><br>
+
+    <button onclick="login()">Login</button>
+</body>
+</html>
+<script>
+
+    var user1 = JSON.parse(localStorage.getItem("userData1"))
+    function login() {
+        var e = document.getElementById("email1");
+        var p = document.getElementById("pass1");
+
+        for(let i = 0; i < user1.length; i++) {
+            if(e.value == user1[i].email && p.value == user1[i].pass) {
+                alert("Login Sucessfully");
+                window.location.href = "menu.html";
+            } else {
+                alert ("Email and Passwards are not matched");
+            }
+        }
+    }
+</script>
