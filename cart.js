@@ -10,10 +10,10 @@ let s = JSON.parse(localStorage.getItem("cart1"));
             let div = document.createElement("div");
 
             let img = document.createElement("img");
-            img.src = item.strMealThumb;
+            img.src = item.strCategoryThumb;
 
             let name = document.createElement("h2");
-            name.innerText = item.strMeal;
+            name.innerText = item.strCategory;
 
             let price = document.createElement("h1");
             price = Math.random() * 500;

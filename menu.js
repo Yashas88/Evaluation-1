@@ -1,14 +1,13 @@
 let yashas = JSON.parse(localStorage.getItem("cart1")) || [];
 
     async function showData() {
-        // let response = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
-        let response = await fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772"); // real
-        // let response = await fetch("https://http://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood");
+        // let response = await fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772"); 
+        let response = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
         let data = await response.json();
-        // console.log(data);
+        console.log(data);
 
-        appendItems(data.meals)
-        // console.log(data.meals)
+        appendItems(data.categories)
+        console.log(data.categories)
     }
 
     showData();
@@ -20,10 +19,10 @@ let yashas = JSON.parse(localStorage.getItem("cart1")) || [];
             let div = document.createElement("div");
 
             let img = document.createElement("img");
-            img.src = item.strMealThumb;
+            img.src = item.strCategoryThumb;
 
             let name = document.createElement("h2");
-            name.innerText = item.strMeal;
+            name.innerText = item.strCategory;
 
             let price = document.createElement("h1");
             price = (Math.random() * 501) + 100;
